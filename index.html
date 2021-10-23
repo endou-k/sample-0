@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="SAMURAI ENGINEER">
+    <title>綺麗な画集</title>
+
+    <!--BootstrapのCSSを読み込む-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--bootstrap.bundle.min.jsの読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"
+        defer>
+    </script>
+    <!--styles.cssの読み込み -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--ナビゲーションバー開始 -->
+    <!-- navbarでナビゲーションバー作成。navbar-expand-lgで画面幅が広いときハンバーガーボタンを非表示。 -->
+    <nav class="navbar navbar-expand-lg">
+        <!-- navbarのコンテナ -->
+        <div class="container">
+            <!-- navbar-brandはロゴ部分。独自クラスのmy_navbar_brandで細かな調整。 -->
+            <a class="navbar-brand my_navbar_brand">
+                <!-- ロゴのアイコンを配置。navbar_brand_logoは独自クラス。 -->
+                <img class="img-fluid navbar_brand_logo" src="img/ロゴ.jpg" alt="サイトアイコン">
+                <span>SEASON</span>
+            </a>
+            <!-- navbar-togglerはハンバーガーボタンを表示・非表示にするクラス。 -->
+            <div class="navbar-toggler hamburger_menu" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                　aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <input type="checkbox" id="hamburger_btn_check">
+                <label for="hamburger_btn_check" class="hamburger_btn">
+                    <img class="btn_open" src="img/button_open.png" alt="ナビゲーションバーのボタン">
+                    <img class="btn_close" src="img/button_close.png" alt="ナビゲーションバーのボタン">
+                </label>
+            </div>
+            <!-- これ以降がナビゲーションメニュー部分。説明は後述。 -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" href="#spring">Spring</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" href="#summer">Summer</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" href="#autumn">Autumn</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link my_nav_link my-2" href="#winter">Winter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--ナビゲーションバー終了 -->
+
+    <!--カルーセル開始-->
+    <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <!-- carousel-inner：カルーセルのキャプションと背景画像の部分。現在は1枚目だけ表示。 -->
+        <div class="carousel-inner">
+            <!-- カルーセル1枚目 -->
+            <div class="carousel-item active">
+                <img src="img/春１.jpg" alt="">
+                <div class="carousel-caption">
+                    <!-- 独自クラスで位置とフォントを変更 -->
+                    <h1 class="my_carousel_caption">
+                        SPRING
+                    </h1>
+                </div>
+            </div>
+            <!-- カルーセル2枚目 -->
+            <div class="carousel-item">
+                <img src="img/夏１.jpg" alt="サンプル画像">
+                <div class="carousel-caption">
+                    <h1 class="my_carousel_caption">
+                        SUMMARY
+                    </h1>
+                </div>
+            </div>
+            <!-- カルーセル3枚目 -->
+            <div class="carousel-item">
+                <img src="img/秋1.jpg" alt="サンプル画像">
+                <div class="carousel-caption">
+                    <h1 class="my_carousel_caption">
+                        AUTUMN
+                    </h1>
+                </div>
+            </div>
+            <!-- カルーセル4枚目 -->
+            <div class="carousel-item">
+                <img src="img/冬.jpg" alt="サンプル画像">
+                <div class="carousel-caption">
+                    <h1 class="my_carousel_caption">
+                        WINTER
+                    </h1>
+                </div>
+            </div>
+            <!-- コントロールボタン 左側 -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <!-- コントロールボタン 右側 -->
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+        <!--季節の説明 -->
+        <!-- 春 -->
+        <section class="about_us_bg" id="about">
+            <div class="container py-5 mb-5">
+                <!-- rowクラス（行） -->
+                <div class="row">
+                    <!-- 左側カラム（6/12分割） -->
+                    <div class="col-lg-6 text-left">
+                        <!-- 上下方向にパディング（サイズ5） -->
+                        <div class="py-5">
+                            <!-- 下方向にマージン（サイズ5） -->
+                            <h2 class="section_title about mb-5">
+                                SPRING
+                            </h2>
+                            <!-- 下方向にマージン（サイズ2） -->
+                            <p class="mb-2">
+                                春は、寒い冬から気温が上がり始め、朝晩はまだ肌寒さはあるが次第に日中は暖かくなる時期であり、秋と並んで一年の中では最も気候の良い穏やかな季節とも言われる。
+                            </p>
+                            <!-- 下方向にマージン（サイズ2） -->
+                            <p class="mb-2">
+                                雪や氷が溶け、植物が芽を出す時期である。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 右側カラム（6/12分割） -->
+                    <div class="col-lg-6">
+                        <!-- 画像を配置 -->
+                        <img src="img/春２.jpg" alt="" height="350px" width="600px">
+                    </div>
+                </div>
+            </div>
+            <!-- 夏 -->
+
+            <div class="container py-5 mb-5">
+                <div class="row">
+                    <div class="col-lg-6 text-left">
+                        <div class="py-5">
+                            <h2 class="section_title about_oa mb-5">
+                                SUMMARY
+                            </h2>
+                            <p class="mb-2">
+                                四季のひとつで、春と秋にはさまれた季節。天文学的には夏至から秋分まで。太陽暦では6月から8月を指し、陰暦では4月から6月となる。
+                            </p>
+                            <p class="mb-2">
+                                夏には、太陽エネルギーの放射が北半球に偏るため、ハドレー循環、フェレル循環を中心とする大気循環も全体として大きく北側に移動することになる。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/夏.jpg" alt="" height="350px" width="600px">
+                    </div>
+                </div>
+            </div>
+            <!-- 秋 -->
+
+            <div class="container py-5 mb-5">
+                <div class="row">
+                    <div class="col-lg-6 text-left">
+                        <div class="py-5">
+                            <h2 class="section_title about_ob mb-5">
+                                AUTUMN
+                            </h2>
+                            <p class="mb-2">
+                                秋（あき）は、四季の1つであり夏の後、冬の前に位置する。
+                            </p>
+                            <p class="mb-2">
+                                中緯度の温帯地方では広葉樹が葉を落とし、草が枯れるなど冬へと向かう季節である。稲などの穀物や果物が実る時期であり、成熟などを意味する。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/秋1.jpg" alt="" height="350px" width="600px">
+                    </div>
+                </div>
+            </div>
+            <!-- 冬 -->
+
+            <div class="container py-5 mb-5">
+                <div class="row">
+                    <div class="col-lg-6 text-left">
+                        <div class="py-5">
+                            <h2 class="section_title about_oc mb-5">
+                                WINTER
+                            </h2>
+                            <p class="mb-2">
+                                冬（ふゆ）は、四季の一つであり、一年の中で最も寒い期間・季節を指す。
+                            </p>
+                            <p class="mb-2">
+                                秋と春に挟まれた季節。二十四節気や旧暦のように、一年中で最も太陽の高度が低く夜が長い期間を指すこともある。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/冬.jpg" alt="" height="350px" width="600px">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--終了-->
+
+        <!-- 風景 -->
+        <section id="gallery">
+            <div class="container mb-5">
+                <h2 class="mb-3 section_title gallery text-center">GALLERY</h2>
+                <p class="text-center mb-5">
+                    綺麗な風景
+                </p>
+                <div class="row">
+                    <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+                        <img class="img-fluid" src="img/もう少しだけ.jpg" alt="サンプル画像">
+                    </div>
+                    <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+                        <img class="img-fluid" src="img/風景２.jpg" alt="サンプル画像">
+                    </div>
+                    <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+                        <img class="img-fluid" src="img/星１.jpg" alt="サンプル画像">
+                    </div>
+                    <div class="col-6 col-lg-3 mb-4 d-flex justify-content-center">
+                        <img class="img-fluid" src="img/if.jpg" alt="サンプル画像">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----地図---->
+        <section id="access">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section_title text-center access mb-5">MAP</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-5 px-2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414895.2111643407!2d139.46067931888916!3d35.66791911731922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6YO95p2x5Lqs!5e0!3m2!1sja!2sjp!4v1634949811673!5m2!1sja!2sjp"
+                    class="w-100" style="height: 50vh;" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- フッター開始 -->
+        <footer class=”footer”>© 2020 簡単フッター</footer>
+        </main>
+</body>
+
+</html>
